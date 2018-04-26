@@ -1,6 +1,9 @@
 module.exports = {
-  plugins: [
-     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss-sass'
-  ]
+    siteMetadata: {
+        title: 'DAB Gatsby'
+    },
+    plugins: [
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-postcss-sass'
+    ]
 };

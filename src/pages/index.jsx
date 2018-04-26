@@ -4,11 +4,13 @@ import '../assets/scss/init.scss';
 
 class IndexRoute extends React.Component {
     render() {
+        const { title, subtitle } = this.props.data.site.siteMetadata;
+
         return (
             <div>
                 <Helmet>
-                    <title>DAB Gatsby</title>
-                    <meta name="description" content="DAB Gatsby Description" />
+                    <title>{title}</title>
+                    <meta name="description" content={subtitle} />
                 </Helmet>
                 <div className="content">
                     <div className="content__inner">
@@ -21,3 +23,33 @@ class IndexRoute extends React.Component {
 }
 
 export default IndexRoute;
+
+export const query = graphql`
+  query AboutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
+// export default ({ data }) =>
+//     <div>
+//         <h1>
+//             About {data.site.siteMetadata.title}
+//         </h1>
+//         <p>
+//             We're the only site running on your computer dedicated to showing the best
+//             photos and videos of pandas eating lots of food.
+//         </p>
+//     </div>
+//
+// export const query = graphql`
+//   query AboutQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `
