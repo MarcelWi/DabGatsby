@@ -1,5 +1,6 @@
 import React from "react"
 import Helmet from 'react-helmet';
+import Sidebar from '../components/Sidebar';
 import '../assets/scss/init.scss';
 
 class IndexRoute extends React.Component {
@@ -12,6 +13,7 @@ class IndexRoute extends React.Component {
                     <title>{title}</title>
                     <meta name="description" content={subtitle} />
                 </Helmet>
+                <Sidebar {...this.props} />
                 <div className="content">
                     <div className="content__inner">
                         <p>Hello World</p>
@@ -29,6 +31,11 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        subtitle
+        menu {
+          label
+          path
+        }        
       }
     }
   }
