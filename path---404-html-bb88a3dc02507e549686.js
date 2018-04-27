@@ -1,0 +1,2 @@
+webpackJsonp([0xa2868bfb69fc],{343:function(t,a){t.exports={data:{site:{siteMetadata:{title:"DAB Gatsby",subtitle:"Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",menu:[{label:"Articles",path:"/"},{label:"About me",path:"/about/"},{label:"Contact me",path:"/contact/"}]}}},pathContext:{}}}});
+//# sourceMappingURL=path---404-html-bb88a3dc02507e549686.js.map
